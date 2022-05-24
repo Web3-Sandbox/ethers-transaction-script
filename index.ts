@@ -48,25 +48,28 @@ async function main() {
   await logInitial();
 
   // # One hundred transactions
-  for (let i = 1; i <= 100; i++) {
+  console.log("*** One hundred transactions ****");
+  for (let i = 1; i <= 1; i++) {
     const tx = await sendTransaction();
     console.log(tx.nonce, i);
   }
 
   // # Ten time ten transactions
-  for (let i = 1; i <= 10; i++) {
+  console.log("\n*** Ten time ten transactions ****");
+  for (let i = 1; i <= 1; i++) {
     const contract = await deployContract();
     await contract.deployTransaction.wait();
     console.log(contract.address, i);
 
-    for (let j = 1; j <= 10; j++) {
+    for (let j = 1; j <= 1; j++) {
       const tx = await transfer(contract.address);
       console.log(tx.nonce, i, j);
     }
   }
 
   // # One hundred contracts
-  for (let i = 1; i <= 100; i++) {
+  console.log("\n*** One hundred contracts ****");
+  for (let i = 1; i <= 1; i++) {
     const contract = await deployContract();
     console.log(contract.address, i);
   }
