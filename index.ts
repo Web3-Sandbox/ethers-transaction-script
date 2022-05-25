@@ -40,7 +40,7 @@ async function logInitial() {
   console.log(`network: ${(await provider.getNetwork()).chainId}`);
   console.log(`address: ${wallet.address}`);
   console.log(`balance: ${utils.formatEther(await wallet.getBalance())}`);
-  console.log(`transaction count: ${await wallet.getTransactionCount()}}`);
+  console.log(`transaction count: ${await wallet.getTransactionCount()}`);
   console.log("#########");
 }
 
