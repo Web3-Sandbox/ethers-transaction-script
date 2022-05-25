@@ -73,6 +73,8 @@ async function main() {
     const contract = await deployContract();
     console.log(contract.address, i);
   }
+
+  console.log("#### DONE ####");
 }
 
 main();
